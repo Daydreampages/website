@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Beautiful custom website templates for weddings, baby showers, Save the Dates, and RSVP pages. Easy, fast, and personalized for your event."
+      name="description"
+    />
+    <meta
+      content="wedding website template, baby shower invite, digital RSVP, save the date website, custom event website, personalized html template"
+      name="keywords"
+    />
+    <meta content="Daydream studios" name="author" />
+    <meta content="Event Website Template" name="template-type" />
+    <meta
+      content="Baby Shower, Wedding, Save the Date, RSVP"
+      name="event-types"
+    />
+    <meta content="Digital Templates" name="product-category" />
+    <meta content="Yes" name="customizable" />
+    <meta content="GitHub Pages" name="hosting" />
+    <meta content="Instant Digital Download" name="delivery" />
+    <meta content="None" name="tech-skills-required" />
+    <meta content="Personalized Design" name="branding" />
+    <meta content="1-2 business days" name="turnaround-time" />
+    <meta content="Free setup assistance included" name="support" />
+    <meta content="HTML, CSS, JS" name="format" />
+    <meta content="Custom color themes available" name="colors" />
+    <meta content="Photo upload option" name="photos" />
+    <meta content="Mobile and desktop friendly" name="responsive" />
+    <meta content="Celebrations, Announcements, Events" name="best-use" />
+    <meta
+      content="baby shower, save the date, wedding website, rsvp template, digital invite"
+      name="tags"
+    />
+    <meta
+      content="Couples, Parents-to-be, Small Businesses"
+      name="target-audience"
+    />
+    <meta content="Fully editable before final delivery" name="editable" />
+    <title>
+      Custom Event Website Templates – Baby Shower, Save the Date, Wedding &amp;
+      RSVP Pages
+    </title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      /* Reset & Base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", Arial, sans-serif;
+        background: #f2f2f2;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      /* Grid Container for product cubes */
+      #product-listings {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      /* Each product cube */
+      .product-cube {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.2s ease;
+        position: relative;
+      }
+      .product-cube:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+      .product-cube img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        flex-shrink: 0;
+      }
+      .product-title {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 6px;
+        color: #333;
+      }
+      .product-price {
+        font-weight: 700;
+        color: #f872b5;
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+      }
+
+      /* Hidden details panel */
+      .product-details {
+        display: none;
+        background: #fafafa;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 10px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        max-height: 300px;
+        overflow-y: auto;
+        width: 100%;
+      }
+      /* Show details when active */
+      .product-cube.active .product-details {
+        display: block;
+      }
+
+      /* Buttons inside details */
+      .product-details a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .product-details a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <!-- Default to light mode -->
+    <link href="style-light.css" id="theme-style" rel="stylesheet" />
+    <!-- Other head stuff -->
+    <button aria-label="Toggle dark mode" id="dark-mode-toggle">
+      🌙 Dark Mode
+    </button>
+  </head>
+  <body>
+    <h1 style="text-align: center; margin-bottom: 30px">
+      Custom Event Website Templates
+    </h1>
+    <section class="product-category" id="wedding-invite-products">
+      <div class="product-cube">
+        <img
+          alt="Full Editable Save the Date Template – Boho Sunset Canva Download | Wedding Invitation | All-Inclusive Design"
+          class="product-image"
+          src="assets/save-the-date-3.jpg"
+        />
+        <div class="product-header">
+          <h2 class="product-title">
+            Full Editable Save the Date Template – Boho Sunset Canva Download |
+            Wedding Invitation | All-Inclusive Design
+          </h2>
+          <div class="product-price">$11.99</div>
+        </div>
+        <a class="view-details-button" href="subpages/boho-save-the-date.html"
+          >View Details</a
+        >
+      </div>
+      <div class="product-cube">
+        <img
+          alt="Custom business or Event Website – Save the Date, RSVP Page – Personalized Digital Invite + Free Hosting"
+          class="product-image"
+          src="assets/product-1.jpg"
+        />
+        <div class="product-header">
+          <h2 class="product-title">
+            Custom business or Event Website – Save the Date, RSVP Page –
+            Personalized Digital Invite + Free Hosting
+          </h2>
+          <div class="product-price">$24.99</div>
+        </div>
+        <a class="view-details-button" href="subpages/custom-website.html"
+          >View Details</a
+        >
+      </div>
+      <div class="product-cube">
+        <img
+          alt="Full Baby Shower Website Template – It's a Boy Theme | Editable RSVP Page | Complete Customizable Design"
+          class="product-image"
+          src="assets/its-a-boy-2.jpg"
+        />
+        <div class="product-header">
+          <h2 class="product-title">
+            Full Baby Shower Website Template – It's a Boy Theme | Editable RSVP
+            Page | Complete Customizable Design
+          </h2>
+          <div class="product-price">$11.99</div>
+        </div>
+        <a class="view-details-button" href="subpages/its-a-boy.html"
+          >View Details</a
+        >
+      </div>
+      <div class="product-cube">
+        <img
+          alt="Full Baby Shower Website Template – It's a Girl Theme | Editable RSVP Page | Complete Customizable Design"
+          class="product-image"
+          src="assets/its-a-girl-2.jpg"
+        />
+        <div class="product-header">
+          <h2 class="product-title">
+            Full Baby Shower Website Template – It's a Girl Theme | Editable
+            RSVP Page | Complete Customizable Design
+          </h2>
+          <div class="product-price">$11.99</div>
+        </div>
+        <a class="view-details-button" href="subpages/its-a-girl.html"
+          >View Details</a
+        >
+      </div>
+      <div class="product-cube">
+        <img
+          alt="Insta Link Bio Page — Your Links, All in One Spot"
+          class="product-image"
+          src="assets/link-in-bio.jpg"
+        />
+        <div class="product-header">
+          <h2 class="product-title">
+            Insta Link Bio Page — Your Links, All in One Spot
+          </h2>
+          <div class="product-price">$20.00</div>
+        </div>
+        <a class="view-details-button" href="subpages/link-in-bio.html"
+          >View Details</a
+        >
+      </div>
+      <div class="product-cube">
+        <img
+          alt="Starter Website — Get Your Site Up and Running Fast"
+          class="product-image"
+          src="assets/link-in-bio-1.jpg"
+        />
+        <div class="product-header">
+          <h2 class="product-title">
+            Starter Website — Get Your Site Up and Running Fast
+          </h2>
+          <div class="product-price">$20.00</div>
+        </div>
+        <a class="view-details-button" href="subpages/starter-website.html"
+          >View Details</a
+        >
+      </div>
+      <div class="product-cube">
+        <img
+          alt="Static Page — Simple One-Page Website That Works"
+          class="product-image"
+          src="assets/link-in-bio-2.jpg"
+        />
+        <div class="product-header">
+          <h2 class="product-title">
+            Static Page — Simple One-Page Website That Works
+          </h2>
+          <div class="product-price">$20.00</div>
+        </div>
+        <a class="view-details-button" href="subpages/static-page.html"
+          >View Details</a
+        >
+      </div>
+      <div class="product-cube">
+        <img
+          alt="Full Summer Wedding Website Template – Save the Date Digital Page | Editable RSVP | Complete Customization"
+          class="product-image"
+          src="assets/summer_love.jpg"
+        />
+        <div class="product-header">
+          <h2 class="product-title">
+            Full Summer Wedding Website Template – Save the Date Digital Page |
+            Editable RSVP | Complete Customization
+          </h2>
+          <div class="product-price">$11.99</div>
+        </div>
+        <a class="view-details-button" href="subpages/summer-wedding.html"
+          >View Details</a
+        >
+      </div>
+      <div class="product-cube">
+        <img
+          alt="Full Family Website – Warm Gathering Theme | Editable RSVP Page"
+          class="product-image"
+          src="assets/warm_gathering.jpg"
+        />
+        <div class="product-header">
+          <h2 class="product-title">
+            Full Family Website – Warm Gathering Theme | Editable RSVP Page
+          </h2>
+          <div class="product-price">$11.99</div>
+        </div>
+        <a class="view-details-button" href="subpages/warm-gathering.html"
+          >View Details</a
+        >
+      </div>
+    </section>
+    <section class="product-category" id="baby-shower-products"></section>
+    <section class="product-category" id="featured-products">
+      <h2 class="category-title">Featured Listings</h2>
+      <!-- Full listings will be injected here -->
+    </section>
+    <script>
+      // Toggle details on product cube click
+      document.addEventListener("click", function (e) {
+        const cube = e.target.closest(".product-cube");
+        if (cube) {
+          cube.classList.toggle("active");
+        }
+      });
+    </script>
+    <script>
+      const toggleBtn = document.getElementById("dark-mode-toggle");
+      const themeLink = document.getElementById("theme-style");
+
+      // On load, check if user has a saved preference
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        themeLink.href =
+          savedTheme === "dark" ? "style-dark.css" : "style-light.css";
+        toggleBtn.textContent =
+          savedTheme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
+      }
+
+      toggleBtn.addEventListener("click", () => {
+        if (themeLink.href.includes("style-light.css")) {
+          themeLink.href = "style-dark.css";
+          toggleBtn.textContent = "☀️ Light Mode";
+          localStorage.setItem("theme", "dark");
+        } else {
+          themeLink.href = "style-light.css";
+          toggleBtn.textContent = "🌙 Dark Mode";
+          localStorage.setItem("theme", "light");
+        }
+      });
+    </script>
+    <!-- Your page content ... -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const productCubes = document.querySelectorAll(".product-cube");
+
+        productCubes.forEach((cube) => {
+          cube.addEventListener("click", () => {
+            // Toggle 'active' class to show/hide details
+            cube.classList.toggle("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

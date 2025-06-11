@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Beautiful custom website templates for weddings, baby showers, Save the Dates, and RSVP pages. Easy, fast, and personalized for your event." />
+  <meta name="keywords" content="wedding website template, baby shower invite, digital RSVP, save the date website, custom event website, personalized html template" />
+  <meta name="author" content="Daydream studios" />
+  <meta name="template-type" content="Event Website Template" />
+  <meta name="event-types" content="Baby Shower, Wedding, Save the Date, RSVP" />
+  <meta name="product-category" content="Digital Templates" />
+  <meta name="customizable" content="Yes" />
+  <meta name="hosting" content="GitHub Pages" />
+  <meta name="delivery" content="Instant Digital Download" />
+  <meta name="tech-skills-required" content="None" />
+  <meta name="branding" content="Personalized Design" />
+  <meta name="turnaround-time" content="1-2 business days" />
+  <meta name="support" content="Free setup assistance included" />
+  <meta name="format" content="HTML, CSS, JS" />
+  <meta name="colors" content="Custom color themes available" />
+  <meta name="photos" content="Photo upload option" />
+  <meta name="responsive" content="Mobile and desktop friendly" />
+  <meta name="best-use" content="Celebrations, Announcements, Events" />
+  <meta name="tags" content="baby shower, save the date, wedding website, rsvp template, digital invite" />
+  <meta name="target-audience" content="Couples, Parents-to-be, Small Businesses" />
+  <meta name="editable" content="Fully editable before final delivery" />
+
+  <title>Custom Event Website Templates – Baby Shower, Save the Date, Wedding & RSVP Pages</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    /* Grid Container for product cubes */
+    #product-listings {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    /* Each product cube */
+    .product-cube {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s ease;
+      position: relative;
+    }
+    .product-cube:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .product-cube img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      flex-shrink: 0;
+    }
+    .product-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: #333;
+    }
+    .product-price {
+      font-weight: 700;
+      color: #f872b5;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    /* Hidden details panel */
+    .product-details {
+      display: none;
+      background: #fafafa;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+      text-align: left;
+      max-height: 300px;
+      overflow-y: auto;
+      width: 100%;
+    }
+    /* Show details when active */
+    .product-cube.active .product-details {
+      display: block;
+    }
+
+    /* Buttons inside details */
+    .product-details a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .product-details a:hover {
+      text-decoration: underline;
+    }
+  </style>
+   <!-- Default to light mode -->
+  <link id="theme-style" rel="stylesheet" href="style-light.css" />
+  <!-- Other head stuff -->
+   <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+
+</head>
+<body>
+
+  <h1 style="text-align:center; margin-bottom:30px;">Custom Event Website Templates</h1>
+
+<section id="wedding-invite-products" class="product-category">
+  <h2 class="category-title">Wedding Invitations</h2>
+  <!-- Product cubes will be injected here -->
+</section>
+
+<section id="baby-shower-products" class="product-category">
+  <h2 class="category-title">Baby Shower</h2>
+  <!-- Product cubes will be injected here -->
+</section>
+
+<section id="featured-products" class="product-category">
+  <h2 class="category-title">Featured Listings</h2>
+  <!-- Full listings will be injected here -->
+</section>
+
+
+
+  <script>
+    // Toggle details on product cube click
+    document.addEventListener('click', function(e) {
+      const cube = e.target.closest('.product-cube');
+      if (cube) {
+        cube.classList.toggle('active');
+      }
+    });
+  </script>
+  <script>
+  const toggleBtn = document.getElementById('dark-mode-toggle');
+  const themeLink = document.getElementById('theme-style');
+
+  // On load, check if user has a saved preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    themeLink.href = savedTheme === 'dark' ? 'style-dark.css' : 'style-light.css';
+    toggleBtn.textContent = savedTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    if (themeLink.href.includes('style-light.css')) {
+      themeLink.href = 'style-dark.css';
+      toggleBtn.textContent = '☀️ Light Mode';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      themeLink.href = 'style-light.css';
+      toggleBtn.textContent = '🌙 Dark Mode';
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
+
+<!-- Your page content ... -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const productCubes = document.querySelectorAll('.product-cube');
+
+    productCubes.forEach(cube => {
+      cube.addEventListener('click', () => {
+        // Toggle 'active' class to show/hide details
+        cube.classList.toggle('active');
+      });
+    });
+  });
+</script>
+</body>
+</html>
+
+
+</body>
+</html>
