@@ -1,0 +1,19 @@
+🌐 Daydream Pages – Event Website Templates
+Create stunning, customizable HTML website templates for weddings, baby showers, RSVPs, and more. Built for easy use with clean code, light/dark modes, and no coding required to edit!
+
+✨ What's Included
+merged-listings.html: Main page that showcases your featured listings (9 Full templates).
+
+subpages/: Auto-generated detail pages for each full template.
+
+baby_shower/ and invite_wedding/: Organized folders for Lite and Gallery versions.
+
+assets/: Folder containing all image assets used in templates.
+
+style-light.css and style-dark.css: Toggle-ready light and dark themes.
+
+Python scripts:
+
+merge.py: Injects full listings into your main page.
+
+generate_subpages.py: Creates subpages for each full listing.
