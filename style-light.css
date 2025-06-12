@@ -153,19 +153,19 @@ button:focus-visible {
 }
 
 /* Buy Now Button (Distinct) */
-.buyNow {
+.buy-now {
   background-color: var(--accent-color);
   font-weight: 600;
   transition: background-color 0.3s ease;
 }
 
-.buyNow:hover,
-.buyNow:focus-visible {
+.buy-now:hover,
+.buy-now:focus-visible {
   background-color: var(--accent-hover);
   outline: none;
 }
 
-.buyNow:focus-visible {
+.buy-now:focus-visible {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
 }
@@ -249,7 +249,7 @@ button:focus-visible {
 }
 
 /* Buy Now Button Pulse Animation */
-.buyNow.clicked {
+.buy-now.clicked {
   animation: pulse 0.3s ease;
 }
 
@@ -337,17 +337,10 @@ button:focus-visible {
   text-decoration: underline;
 }
 
-/* Show details when product-cube has 'active' class */
-.product-cube.active .product-details {
+.product-category > .product-card {
   display: block;
 }
 
-/* Make product cubes inline-block or flex in container */
-.product-category > .product-cube {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 16px;
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
