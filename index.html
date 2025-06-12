@@ -205,33 +205,28 @@
         >
       </div>
     </section>
-    <section class="product-category" id="baby-shower-products"></section>
-    <section class="product-category" id="featured-products">
-      <h2 class="category-title">Featured Listings</h2>
-      <!-- Full listings will be injected here -->
-    </section>
-    <script>
-      // Toggle details on product cube click
-      document.addEventListener("click", function (e) {
-        const cube = e.target.closest(".product-cube");
-        if (cube) {
-          cube.classList.toggle("active");
-        }
+   <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Toggle 'active' class on product cube click
+    document.querySelectorAll(".product-cube").forEach((cube) => {
+      cube.addEventListener("click", () => {
+        cube.classList.toggle("active");
       });
-    </script>
-    <script>
-      const toggleBtn = document.getElementById("dark-mode-toggle");
-      const themeLink = document.getElementById("theme-style");
+    });
 
-      // On load, check if user has a saved preference
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) {
-        themeLink.href =
-          savedTheme === "dark" ? "style-dark.css" : "style-light.css";
-        toggleBtn.textContent =
-          savedTheme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
-      }
+    // Theme toggle logic
+    const toggleBtn = document.getElementById("dark-mode-toggle");
+    const themeLink = document.getElementById("theme-style");
 
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      themeLink.href =
+        savedTheme === "dark" ? "style-dark.css" : "style-light.css";
+      toggleBtn.textContent =
+        savedTheme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
+    }
+
+    if (toggleBtn && themeLink) {
       toggleBtn.addEventListener("click", () => {
         if (themeLink.href.includes("style-light.css")) {
           themeLink.href = "style-dark.css";
@@ -243,22 +238,12 @@
           localStorage.setItem("theme", "light");
         }
       });
-    </script>
-    <!-- Your page content ... -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const productCubes = document.querySelectorAll(".product-cube");
+    }
+  });
+</script>
 
-        productCubes.forEach((cube) => {
-          cube.addEventListener("click", () => {
-            // Toggle 'active' class to show/hide details
-            cube.classList.toggle("active");
-          });
-        });
-      });
-    </script>
-    <footer class="site-footer fade-in">
-  <img src="/assets/daydream-logo.png" alt="Daydream Studios logo" class="footer-logo" />
+<footer class="site-footer fade-in">
+  <img src="assets/daydream-logo.png" alt="Daydream Studios logo" class="footer-logo" />
   <p>© 2025 Daydream Studios · All rights reserved.</p>
 </footer>
   </body>
