@@ -87,6 +87,7 @@ nav ul li a:focus-visible {
 /* Product Card */
 .product-card {
   width: 100%;
+  aspect-ratio: 1 / 1;
   background: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 4px 12px var(--card-shadow);
