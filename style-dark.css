@@ -285,7 +285,7 @@ button:focus-visible {
 
 .product-cube {
   width: 250px;
-  height: auto;
+  height: 258px;
   border: 1px solid #ccc;
   border-radius: 12px;
   overflow: hidden;
