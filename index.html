@@ -213,13 +213,15 @@
   </section>
 
    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    // Toggle 'active' class on product cube click
-    document.querySelectorAll(".product-cube").forEach((cube) => {
-      cube.addEventListener("click", () => {
-        cube.classList.toggle("active");
-      });
-    });
+document.querySelectorAll(".product-cube").forEach((cube) => {
+  cube.addEventListener("click", (e) => {
+    if (e.target.tagName.toLowerCase() !== "a") {
+      cube.classList.toggle("active");
+    }
+    // else, do nothing — let the link work normally
+  });
+});
+
 
     // Theme toggle logic
     const toggleBtn = document.getElementById("dark-mode-toggle");
