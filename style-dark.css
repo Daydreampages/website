@@ -417,12 +417,10 @@ button:focus-visible {
 .view-details-button:hover {
   background-color: #222;
 }
+
 .site-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #2F3E46;
-  background-color: rgba(255, 245, 225, 0.7); /* semi-transparent ivory */
+  background-color: #2F3E46; /* matches your dark theme background */
+  color: #FFF5E1;
 }
 
 footer {
