@@ -278,10 +278,6 @@ button:focus-visible {
   padding: 20px 0;
 }
 
-.product-category > .product-cube {
-  display: block; /* default for grid */
-  margin-right: 0;
-}
 
 .product-cube {
   width: 250px;
