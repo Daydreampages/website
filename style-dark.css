@@ -125,6 +125,7 @@ nav ul li a:focus-visible {
 }
 
 .product-details {
+  display: none;
   padding: 12px 15px;
   font-size: 14px;
   color: var(--text-color);
@@ -270,16 +271,21 @@ button:focus-visible {
 /* === Product Cube Styles - Dark Mode === */
 
 .product-category {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 16px;
   justify-content: center;
   padding: 20px 0;
 }
 
+.product-category > .product-cube {
+  display: block; /* default for grid */
+  margin-right: 0;
+}
+
 .product-cube {
   width: 250px;
-  height: 258px;
+  height: auto;
   border: 1px solid #ccc;
   border-radius: 12px;
   overflow: hidden;
