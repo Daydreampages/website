@@ -105,6 +105,7 @@ nav ul li a:focus-visible {
 
 .product-link {
   display: block;
+  object-fit: cover;
   text-decoration: none;
   color: inherit;
 }
