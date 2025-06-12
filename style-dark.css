@@ -156,19 +156,19 @@ button:focus-visible {
 }
 
 /* Buy Now Button (Distinct) */
-.buy-Now {
+.buy-now {
   background-color: var(--accent-color);
   font-weight: 600;
   transition: background-color 0.3s ease;
 }
 
-.buy-Now:hover,
-.buy-Now:focus-visible {
+.buy-now:hover,
+.buy-now:focus-visible {
   background-color: var(--accent-hover);
   outline: none;
 }
 
-.buy-Now:focus-visible {
+.buy-now:focus-visible {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
 }
@@ -253,7 +253,7 @@ button:focus-visible {
 }
 
 /* Buy Now Button Pulse Animation */
-.buy-Now.clicked {
+.buy-now.clicked {
   animation: pulse 0.3s ease;
 }
 
