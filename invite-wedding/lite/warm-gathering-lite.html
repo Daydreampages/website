@@ -114,38 +114,17 @@
     </ul>
   </div>
 </div>
-      </nav>
-    </div>
-  </div>
-
-  <script>
+        <script>
     document.addEventListener("DOMContentLoaded", () => {
       const themeLink = document.getElementById("theme-style");
-      const toggleBtn = document.getElementById("dark-mode-toggle");
-
       const savedTheme = localStorage.getItem("theme");
-      if (savedTheme && themeLink) {
-        themeLink.href = savedTheme === "dark"
-          ? "../../style-dark.css"
-          : "../../style-light.css";
-        if (toggleBtn) {
-          toggleBtn.textContent = savedTheme === "dark"
-            ? "☀️ Light Mode"
-            : "🌙 Dark Mode";
-        }
-      }
 
-      if (toggleBtn && themeLink) {
-        toggleBtn.addEventListener("click", () => {
-          const isLight = themeLink.href.includes("style-light.css");
-          themeLink.href = isLight
-            ? "../../style-dark.css"
-            : "../../style-light.css";
-          toggleBtn.textContent = isLight
-            ? "☀️ Light Mode"
-            : "🌙 Dark Mode";
-          localStorage.setItem("theme", isLight ? "dark" : "light");
-        });
+      if (savedTheme && themeLink) {
+        if (savedTheme === "dark") {
+          themeLink.href = "../../style-dark.css";
+        } else {
+          themeLink.href = "../../style-light.css";
+        }
       }
     });
   </script>
