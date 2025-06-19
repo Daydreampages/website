@@ -44,7 +44,7 @@ button {
   display: inline-block;
   background-color: var(--primary-color);
   color: #fff;
-  padding: 4px 10px;
+  padding: 4px 5px;
   border: none;
   border-radius: 999px;
   font-size: 16px;
