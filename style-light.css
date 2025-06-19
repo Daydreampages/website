@@ -381,23 +381,23 @@ button:focus-visible {
   
 }
 .back-home {
-  display: inline-block;
-  background-color: #0070ba; /* Button color */
-  color: #fff;                /* Text color */
-  padding: 10px 20px;         /* Size */
-  border: none;
-  border-radius: 999px;       /* Fully rounded */
+  background-color: #0070ba;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 999px;
   font-size: 16px;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
-  cursor: pointer;
+  display: inline-block;
   transition: background-color 0.3s ease;
 }
 
-.back-home a:hover {
+.back-home:hover {
+  background-color: #005c9e;
   text-decoration: underline;
 }
+
 
 .view-details-button {
   display: inline-block;
