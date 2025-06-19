@@ -15,9 +15,7 @@
   --cart-badge-text: #000;
 }
 
-/* =====================================
-   Reset & Base Styles
-   ===================================== */
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -27,24 +25,22 @@
 body {
   font-family: 'Roboto', 'Open Sans', sans-serif;
   line-height: 1.6;
-  padding: 12px;
+  padding: 20px;
   background-color: var(--background-color);
   color: var(--text-color);
 }
 
-/* =====================================
-   Unified Button + Link Styles
-   ===================================== */
+/* Unified Buttons & Links */
+button,
 .button,
 .buy-now,
 .back-home,
 .version-links,
-.view-details-button,
-button {
+.view-details-button {
   display: inline-block;
   background-color: var(--primary-color);
   color: #fff;
-  padding: 4px 5px;
+  padding: 10px 16px;
   border: none;
   border-radius: 999px;
   font-size: 16px;
@@ -55,25 +51,27 @@ button {
   transition: background-color 0.3s ease;
 }
 
+button:hover,
 .button:hover,
 .buy-now:hover,
 .back-home:hover,
 .version-links:hover,
-.view-details-button:hover,
-button:hover {
+.view-details-button:hover {
   background-color: var(--primary-hover);
   text-decoration: underline;
 }
 
 button:focus-visible,
-.button:focus-visible {
+.button:focus-visible,
+.buy-now:focus-visible,
+.back-home:focus-visible,
+.version-links:focus-visible,
+.view-details-button:focus-visible {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
 
-/* =====================================
-   Cards & Layout
-   ===================================== */
+/* Product Cards & Layout */
 .product-card {
   aspect-ratio: 1 / 1;
   width: 100%;
@@ -101,12 +99,14 @@ button:focus-visible,
   color: inherit;
 }
 
-.product-link img {
+.product-link img,
+.product-image {
   width: 100%;
-  flex-grow: 1;
+  height: 60%;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
   display: block;
+  flex-grow: 1;
 }
 
 .product-title {
@@ -129,15 +129,7 @@ button:focus-visible,
   justify-content: center;
 }
 
-.product-card img {
-  width: 100%;
-  height: 60%;
-  object-fit: cover;
-}
-
-/* =====================================
-   Cart & Footer
-   ===================================== */
+/* Cart Styles */
 #cart-container {
   position: fixed;
   top: 20px;
@@ -148,10 +140,23 @@ button:focus-visible,
 #cart-button {
   background-color: var(--accent-color);
   color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-#cart-button:hover {
+#cart-button:hover,
+#cart-button:focus-visible {
   background-color: var(--accent-hover);
+  outline: none;
+}
+
+#cart-button:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 #cart-count {
@@ -165,6 +170,7 @@ button:focus-visible,
   right: -5px;
 }
 
+/* Footer */
 footer {
   background-color: #f0f3f5;
   color: #ec0e88;
@@ -172,19 +178,18 @@ footer {
   text-align: center;
   font-size: 0.9rem;
 }
+
 .footer-logo {
-  background-color: white;  /* white background behind logo */
-  padding: 8px;             /* some padding for spacing */
-  border-radius: 12px;      /* rounded corners for style */
+  background-color: white;
+  padding: 8px;
+  border-radius: 12px;
   max-width: 100px;
   margin-bottom: 10px;
   display: inline-block;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); /* subtle shadow to lift it */
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
-/* =====================================
-   Responsive
-   ===================================== */
+/* Responsive */
 @media (max-width: 768px) {
   .product-card .title {
     font-size: 16px;
