@@ -1,23 +1,21 @@
 /* =====================================
-   DARK THEME (Override with JS or media query)
+   DARK THEME - Unified Button & Link Styles
    ===================================== */
 :root {
-  --primary-color: #4ea8de;
-  --primary-hover: #358ec7;
-  --accent-color: #f38ba8;
-  --accent-hover: #d76588;
-  --background-color: #1e1e1e;
-  --text-color: #e0e0e0;
-  --card-bg: #2a2a2a;
-  --card-shadow: rgba(0, 0, 0, 0.4);
-  --card-shadow-hover: rgba(0, 0, 0, 0.6);
-  --cart-badge-bg: #fef08a;
-  --cart-badge-text: #111;
+  --primary-color: #3399ff;         /* lighter blue */
+  --primary-hover: #1a73e8;         /* slightly darker blue */
+  --accent-color: #f872b5;          /* keep accent pink */
+  --accent-hover: #d55a92;
+  --background-color: #121212;      /* dark background */
+  --text-color: #e0e0e0;            /* light text */
+  --card-bg: #1e1e1e;               /* dark card background */
+  --card-shadow: rgba(0, 0, 0, 0.8);
+  --card-shadow-hover: rgba(255, 255, 255, 0.1);
+  --cart-badge-bg: #ff4081;         /* pink-ish */
+  --cart-badge-text: #fff;
 }
 
-/* =====================================
-   Reset & Base Styles
-   ===================================== */
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -32,19 +30,17 @@ body {
   color: var(--text-color);
 }
 
-/* =====================================
-   Unified Button + Link Styles
-   ===================================== */
+/* Unified Buttons & Links */
+button,
 .button,
 .buy-now,
 .back-home,
 .version-links,
-.view-details-button,
-button {
+.view-details-button {
   display: inline-block;
   background-color: var(--primary-color);
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 16px;
   border: none;
   border-radius: 999px;
   font-size: 16px;
@@ -55,25 +51,27 @@ button {
   transition: background-color 0.3s ease;
 }
 
+button:hover,
 .button:hover,
 .buy-now:hover,
 .back-home:hover,
 .version-links:hover,
-.view-details-button:hover,
-button:hover {
+.view-details-button:hover {
   background-color: var(--primary-hover);
   text-decoration: underline;
 }
 
 button:focus-visible,
-.button:focus-visible {
+.button:focus-visible,
+.buy-now:focus-visible,
+.back-home:focus-visible,
+.version-links:focus-visible,
+.view-details-button:focus-visible {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
 
-/* =====================================
-   Cards & Layout
-   ===================================== */
+/* Product Cards & Layout */
 .product-card {
   aspect-ratio: 1 / 1;
   width: 100%;
@@ -101,12 +99,14 @@ button:focus-visible,
   color: inherit;
 }
 
-.product-link img {
+.product-link img,
+.product-image {
   width: 100%;
-  flex-grow: 1;
+  height: 60%;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
   display: block;
+  flex-grow: 1;
 }
 
 .product-title {
@@ -114,6 +114,7 @@ button:focus-visible,
   font-weight: bold;
   margin: 10px;
   text-align: center;
+  color: var(--text-color);
 }
 
 .product-price {
@@ -129,9 +130,7 @@ button:focus-visible,
   justify-content: center;
 }
 
-/* =====================================
-   Cart & Footer
-   ===================================== */
+/* Cart Styles */
 #cart-container {
   position: fixed;
   top: 20px;
@@ -142,10 +141,23 @@ button:focus-visible,
 #cart-button {
   background-color: var(--accent-color);
   color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-#cart-button:hover {
+#cart-button:hover,
+#cart-button:focus-visible {
   background-color: var(--accent-hover);
+  outline: none;
+}
+
+#cart-button:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 #cart-count {
@@ -159,17 +171,26 @@ button:focus-visible,
   right: -5px;
 }
 
+/* Footer */
 footer {
-  background-color: #2f3e46;
-  color: #fff5e1;
+  background-color: #1e1e1e;
+  color: #f872b5;  /* accent pink */
   padding: 20px;
   text-align: center;
   font-size: 0.9rem;
 }
 
-/* =====================================
-   Responsive
-   ===================================== */
+.footer-logo {
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 12px;
+  max-width: 100px;
+  margin-bottom: 10px;
+  display: inline-block;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .product-card .title {
     font-size: 16px;
