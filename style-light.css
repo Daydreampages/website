@@ -99,7 +99,6 @@ nav ul li a:focus-visible {
 }
 
 
-.product-card:hover,
 .product-card:focus-within {
   box-shadow: 0 8px 20px var(--card-shadow-hover);
   outline: none;
@@ -148,7 +147,7 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover,
+
 button:focus-visible {
   background-color: var(--primary-hover);
   outline: none;
@@ -175,7 +174,6 @@ button:focus-visible {
   transition: background-color 0.3s ease;
 }
 
-.buy-now:hover,
 .buy-now:hover {
   background-color: #005c9e; /* Hover color */
 }
@@ -336,7 +334,6 @@ button:focus-visible {
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
 }
 
 .version-links h3 {
