@@ -392,6 +392,12 @@ button:focus-visible {
   background-color: #222;
 }
 
+.button-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
 .site-footer {
   background-color: rgba(255, 245, 225, 0.7); /* matches your light theme */
   color: #2F3E46;
