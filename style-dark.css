@@ -1,18 +1,23 @@
+/* =====================================
+   DARK THEME (Override with JS or media query)
+   ===================================== */
 :root {
-  --primary-color: #66aaff;
-  --primary-hover: #3388ff;
-  --accent-color: #ff69b4;
-  --accent-hover: #cc5588;
-  --background-color: #1a1a1a;
+  --primary-color: #4ea8de;
+  --primary-hover: #358ec7;
+  --accent-color: #f38ba8;
+  --accent-hover: #d76588;
+  --background-color: #1e1e1e;
   --text-color: #e0e0e0;
   --card-bg: #2a2a2a;
   --card-shadow: rgba(0, 0, 0, 0.4);
   --card-shadow-hover: rgba(0, 0, 0, 0.6);
-  --cart-badge-bg: #ff8;
+  --cart-badge-bg: #fef08a;
   --cart-badge-text: #111;
 }
 
-/* Reset & Base */
+/* =====================================
+   Reset & Base Styles
+   ===================================== */
 * {
   margin: 0;
   padding: 0;
@@ -27,13 +32,15 @@ body {
   color: var(--text-color);
 }
 
-/* Reusable Button and Link Classes */
+/* =====================================
+   Unified Button + Link Styles
+   ===================================== */
 .button,
-a.button,
 .buy-now,
 .back-home,
-.version-links a,
-.view-details-button {
+.version-links,
+.view-details-button,
+button {
   display: inline-block;
   background-color: var(--primary-color);
   color: #fff;
@@ -49,87 +56,131 @@ a.button,
 }
 
 .button:hover,
-a.button:hover,
 .buy-now:hover,
 .back-home:hover,
-.version-links a:hover,
-.view-details-button:hover {
+.version-links:hover,
+.view-details-button:hover,
+button:hover {
   background-color: var(--primary-hover);
-  text-decoration: none;
-}
-
-/* Navigation */
-nav {
-  margin-bottom: 20px;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-nav ul li a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 500;
-}
-nav ul li a:hover {
-  color: var(--primary-hover);
   text-decoration: underline;
 }
 
-/* Product Cards */
+button:focus-visible,
+.button:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* =====================================
+   Cards & Layout
+   ===================================== */
 .product-card {
+  aspect-ratio: 1 / 1;
+  width: 100%;
   background: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 4px 12px var(--card-shadow);
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s ease;
 }
+
 .product-card:hover,
 .product-card:focus-within {
   box-shadow: 0 8px 20px var(--card-shadow-hover);
+  outline: none;
 }
+
 .product-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   color: inherit;
 }
 
-/* Grid */
-.listings-container,
-.product-category {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
-  justify-items: center;
+.product-link img {
+  width: 100%;
+  flex-grow: 1;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  display: block;
 }
 
-/* Cart */
-#cart-button {
-  background: var(--accent-color);
+.product-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px;
+  text-align: center;
 }
+
+.product-price {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.product-category {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+/* =====================================
+   Cart & Footer
+   ===================================== */
+#cart-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#cart-button {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
 #cart-button:hover {
   background-color: var(--accent-hover);
 }
+
 #cart-count {
   background: var(--cart-badge-bg);
   color: var(--cart-badge-text);
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 6px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
 }
 
-/* Footer */
 footer {
   background-color: #2f3e46;
   color: #fff5e1;
   padding: 20px;
   text-align: center;
-}
-.site-footer {
-  background-color: rgba(255, 245, 225, 0.7);
+  font-size: 0.9rem;
 }
 
-/* Mobile */
+/* =====================================
+   Responsive
+   ===================================== */
 @media (max-width: 768px) {
-  button, .button {
+  .product-card .title {
+    font-size: 16px;
+  }
+  .product-details {
+    font-size: 13px;
+  }
+  button,
+  .button,
+  .buy-now,
+  .back-home {
     width: 100%;
     font-size: 18px;
   }
