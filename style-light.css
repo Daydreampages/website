@@ -383,8 +383,8 @@ button:focus-visible {
   display: inline-block;
   margin-top: 0.5rem;
   padding: 0.4rem 0.8rem;
-  background-color: #f3f0f0;
-  color: #0a0a0a;
+  background-color: #444;
+  color: #fff;
   text-decoration: none;
   border-radius: 6px;
   font-size: 0.9rem;
