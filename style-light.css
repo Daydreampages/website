@@ -172,6 +172,15 @@ footer {
   text-align: center;
   font-size: 0.9rem;
 }
+.footer-logo {
+  background-color: white;  /* white background behind logo */
+  padding: 8px;             /* some padding for spacing */
+  border-radius: 12px;      /* rounded corners for style */
+  max-width: 100px;
+  margin-bottom: 10px;
+  display: inline-block;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); /* subtle shadow to lift it */
+}
 
 /* =====================================
    Responsive
